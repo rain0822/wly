@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<script>
+	$(document).ready(function(){
+		$('#gold').blur(function(){
+			var gold = parseInt($('#gold').val());
+			var level = parseInt($('#level').val());
+			$('#need').text(Math.ceil((gold*1000000)/(level+10000)));
+		});
+		$('#level').blur(function(){
+			var gold = parseInt($('#gold').val());
+			var level = parseInt($('#level').val());
+			$('#need').text(Math.ceil((gold*1000000)/(level+10000)));
+		});
+	});
+</script>
+
+</head>
+<body>
+	<div class="container">
+		<h4 class="alert alert-info">臥龍吟 臥龍出淵S1 吞食天地 互刷規則 版本v6.1.3<br/></h4><br/>
+		
+		<div class="panel-group" id="accordion">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+						<h4 class="panel-title">
+							一、規則
+						</h4>
+					</a>
+				</div>
+				<div id="collapse1" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+							<ul>
+								<li>三勢力互刷：袁紹和董卓請自行較量勝者留下、袁術和劉表請自行較量勝者留下，馬騰及劉璋請自行較量勝者留下，若自己的勢力為-%，請花金轉換勢力或者留在原本勢力都可以</li>
+								<li>紹卓糧倉：陳留、江陵、盧江、天水、南皮、洛陽</li>
+								<li>術表糧倉：柴桑、新野、濮陽、永安、建鄴、零陵</li>
+								<li>騰璋糧倉：漢昌、壽春、武陵、許昌、武威、成都</li>
+								<li>每勢力共6座糧倉，糧倉產量350以上田一人只限一個，三勢力共72個，每勢力共為24個，所有城未滿350及互刷城350及以上及襄陽城不在此內，如何分有350：繁榮16K前7 及 繁榮13K前4 及 繁榮10K前1</li>
+								<li>因公平起見，吞食最後不做統一的動作</li>
+								<li>襄陽城三勢力輪流佔，吞食共60天，每勢力佔2輪，第1輪各9天，第2輪各10天，最後1天不算，吞食前2天不算</li>
+								<li>所有田皆不能搶，撞車者需歸還田</li>
+								<li>三勢力規則必須一致</li>
+								<li>吞食禁止刻意擋人及攻打糧倉，刻意者，取消所有佔田的資格</li>
+								<li>糧倉禁止刷人頭</li>
+								<li>可刷人頭城池：滕璋(街亭、都安)，術表(宜都、阜陵)、紹卓(界橋、虎牢)</li>
+								<li class="text-danger">當刷頭城都有人時，可自行追加可刷人頭城池：滕璋(陳倉、涪陵)，術表(陸口、尋陽)、紹卓(中牟、任城)</li>
+								<li>刷頭城不開放刷牆</li>
+								<li>刷頭結束請解散</li>
+								<li>多人刷頭時請調整順序及控制人頭數量，盡量避免吃到別人的頭</li>
+								<li>刷頭時，攻方為人頭方</li>
+								<li>該次襄陽佔領時間表</li>
+								<ul>
+									<li>中立 09/21 - 09/23 共三天</li>
+									<li>x勢力 09/24 - 10/02 共九天</li>
+									<li>y勢力 10/03 - 10/11 共九天</li>
+									<li>z勢力 10/12 - 10/20 共九天</li>
+									<li>x勢力 10/21 - 10/30 共十天</li>
+									<li>y勢力 10/31 - 11/09 共十天</li>
+									<li>z勢力 11/10 - 11/19 共十天</li>
+								</ul>
+								<li>糧倉不開放最後攻打</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+						<h4 class="panel-title">
+							二、未來吞食改版內容
+						</h4>
+					</a>
+				</div>
+				<div id="collapse2" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+							<ul>
+								<li>增加勢力總覽,玩家可以在勢利總覽界面查看所有勢力的總人數、總戰力等信息。</li>
+								<li>猛將2：額外功績由80點提升為120點</li>
+								<li>猛將3：每次戰勝消耗5個戰爭令，獲得額外450點功績，並且必會讓對方主將受傷。 （效果不與其他猛將疊加）。 VIP0以上可以使用。使用計謀需消耗80000軍糧或者250金幣。</li>
+								<li>攻城3：每次攻擊城牆消耗5個戰爭令，獲得10倍功績，並對城牆造成2點傷害。 （效果不與其他攻城疊加）。 VIP0以上可以使用。使用計謀需消耗80000軍糧或者250金幣。</li>
+								<li>遁走3：每次戰敗消耗的戰爭令等於2倍當前的連勝數，並使戰敗每連獲得的功績提高100點，戰敗的武將不會受傷。 VIP0以上可以使用。使用計謀需消耗50000軍糧或者150金幣。</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+						<h4 class="panel-title">
+							三、臥龍版本更新內容
+						</h4>
+					</a>
+				</div>
+				<div id="collapse3" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+							<ul>
+								<li><a href="http://wly.efunfun.com/News/GameContent/notice_wly_72191_20150108030500.htm" target="_blank">台版v1.4.4</a></li>
+								<li><a href="http://wly.efunfun.com/News/GameContent/notice_wly_79531_20150710065000.htm" target="_blank">台版v1.5.0</a></li>
+								<li><a href="#">台版v1.6.2</a></li>
+								<li><a href="http://www.lequ.com/wly/201409/77345.html" target="_blank">陸2014年09月28日改版內容(台版已更新)</a></li>
+								<li><a href="http://www.lequ.com/wly/201412/80186.html" target="_blank">陸2014年12月09日改版內容(台版已更新)</a></li>
+								<li><a href="http://www.lequ.com/wly/201412/80823.html" target="_blank">陸2014年12月22日改版內容(台版已更新)</a></li>
+								<li><a href="http://www.lequ.com/wly/201501/82616.html" target="_blank">陸2015年01月31日改版內容(台版V1.6.2已更新)</a></li>
+								<li><a href="http://www.lequ.com/wly/201502/83312.html" target="_blank">陸2015年02月12日改版內容(台版V1.6.2已更新)</a></li>
+								<li><a href="http://www.lequ.com/wly/201504/85178.html" target="_blank">陸2015年04月02日改版內容(台版V1.6.2已更新)</a></li>
+								<li><a href="http://www.lequ.com/wly/201506/87816.html" target="_blank">陸2015年06月03日改版內容(台版V1.6.2已更新)</a></li>
+								<li><a href="http://www.lequ.com/wly/201507/89422.html" target="_blank">陸2015年07月10日改版內容(台版V1.6.2已更新)</a></li>
+								<li><a href="http://www.lequ.com/wly/201507/89688.html" target="_blank">陸2015年07月17日改版內容(台版V1.6.2已更新)</a></li>
+								<li><a href="http://www.lequ.com/wly/201508/90818.html" target="_blank">陸2015年08月17日改版內容(台版V1.6.2已更新)</a></li>
+								<li><a href="http://www.lequ.com/wly/201509/91622.html" target="_blank">陸2015年09月08日改版內容(台版V1.6.2已更新)</a></li>
+								<li><a href="http://www.lequ.com/wly/201510/92873.html" target="_blank">陸2015年10月13日改版內容(台版V1.6.6即將更新)</a></li>
+								<li><a href="http://www.lequ.com/wly/201512/94866.html" target="_blank">陸2015年12月03日改版內容(台版V1.6.6即將更新)</a></li>
+								<li><a href="http://www.lequ.com/wly/201601/96243.html" target="_blank">陸2016年01月07日改版內容(台版V1.6.6即將更新)</a></li>
+								<li><a href="http://www.lequ.com/wly/201602/97512.html" target="_blank">陸2016年02月17日改版內容</a></li>
+								<li><a href="http://www.lequ.com/wly/201603/98738.html" target="_blank">陸2016年03月25日改版內容</a></li>
+								<li><a href="http://www.lequ.com/wly/201604/99601.html" target="_blank">陸2016年04月26日改版內容</a></li>
+								<li><a href="http://www.lequ.com/wly/201606/100753.html" target="_blank">陸2016年06月03日改版內容</a></li>
+								<li><a href="http://www.lequ.com/wly/201607/102232.html" target="_blank">陸2016年07月18日改版內容</a></li>
+								<li><a href="http://www.lequ.com/wly/201609/104063.html" target="_blank">陸2016年09月01日改版內容</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="well">
+				目標金幣：<input type="text" id="gold"/>
+				鑄造等級：<input type="text" id="level"/>
+				國庫需要：<span id="need"></span>
+			</div>
+			<h4><strong>戰報區：</strong></h4>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse21">
+						<h4 class="panel-title">
+							吳蜀之戰 - 火燒連營力(推完230)
+						</h4>
+					</a>
+				</div>
+				<div id="collapse21" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+							<ul>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse20">
+						<h4 class="panel-title">
+							陸遜勢力 - 猇亭戰場
+						</h4>
+					</a>
+				</div>
+				<div id="collapse20" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+							<ul>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse19">
+						<h4 class="panel-title">
+							五溪蠻夷 - 沙摩柯勢力(舊版推完207)(新版推完225)
+						</h4>
+					</a>
+				</div>
+				<div id="collapse19" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+							<ul>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse18">
+						<h4 class="panel-title">
+							呂蒙勢力 - 麥城之戰
+						</h4>
+					</a>
+				</div>
+				<div id="collapse18" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+							<ul>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse17">
+						<h4 class="panel-title">
+							荊州古城 - 關羽勢力(舊版推完205)(新版推完220)
+						</h4>
+					</a>
+				</div>
+				<div id="collapse17" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse16">
+						<h4 class="panel-title">
+							荊州影城 - 司馬微勢力
+						</h4>
+					</a>
+				</div>
+				<div id="collapse16" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse15">
+						<h4 class="panel-title">
+							少年英才 - 司馬乂勢力
+						</h4>
+					</a>
+				</div>
+				<div id="collapse15" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse14">
+						<h4 class="panel-title">
+							蠻荒之戰 - 司馬亮勢力(舊版推完203)(新版推完215)
+						</h4>
+					</a>
+				</div>
+				<div id="collapse14" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse13">
+						<h4 class="panel-title">
+							墮落天官 - 司馬駿勢力
+						</h4>
+					</a>
+				</div>
+				<div id="collapse13" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse12">
+						<h4 class="panel-title">
+							司馬炎勢力 - 禪讓帝位(舊版推完201)(新版推完210)
+						</h4>
+					</a>
+				</div>
+				<div id="collapse12" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse11">
+						<h4 class="panel-title">
+							孫悌勢力 - 夏口保衛戰
+						</h4>
+					</a>
+				</div>
+				<div id="collapse11" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse10">
+						<h4 class="panel-title">
+							孫秀勢力 - 夏口保衛戰(舊版推完199)(新版推完205)
+						</h4>
+					</a>
+				</div>
+				<div id="collapse10" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse9">
+						<h4 class="panel-title">
+							孫歆勢力 - 夏口之戰
+						</h4>
+					</a>
+				</div>
+				<div id="collapse9" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse8">
+						<h4 class="panel-title">
+							向朗勢力 - 漢中軍演(舊版推完197)(新版推完200)
+						</h4>
+					</a>
+				</div>
+				<div id="collapse8" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+						<h4 class="panel-title">
+							焦彝勢力 - 街亭失守
+						</h4>
+					</a>
+				</div>
+				<div id="collapse7" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+						<h4 class="panel-title">
+							董允勢力 - 天水之亂
+						</h4>
+					</a>
+				</div>
+				<div id="collapse6" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+						<h4 class="panel-title">
+							羌族勢力 - 羌族入侵(推完195)
+						</h4>
+					</a>
+				</div>
+				<div id="collapse5" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+							<ul>
+								<li>蜀</li>
+								<ul>
+									<li><a href="http://bbs.lequ.com/forum.php?mod=viewthread&tid=631646" target="_blank">戰報一</a></li>
+									<li><a href="http://bbs.lequ.com/forum.php?mod=viewthread&tid=621854" target="_blank">戰報二</a></li>
+									<li><a href="http://bbs.lequ.com/forum.php?mod=viewthread&tid=622616" target="_blank">戰報三</a></li>
+									<li><a href="http://bbs.lequ.com/forum.php?mod=viewthread&tid=629301" target="_blank">戰報四</a></li>
+									<li><a href="http://bbs.lequ.com/forum.php?mod=viewthread&tid=628107" target="_blank">戰報五</a></li>
+									<li><a href="http://bbs.lequ.com/forum.php?mod=viewthread&tid=623395" target="_blank">戰報六</a></li>
+									<li><a href="http://bbs.lequ.com/forum.php?mod=viewthread&tid=618199" target="_blank">戰報七</a></li>
+								</ul>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+						<h4 class="panel-title">
+							陳騫勢力 - 陽平關之戰
+						</h4>
+					</a>
+				</div>
+				<div id="collapse4" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+							<ul>
+								<li>蜀</li>
+								<ul>
+									<li><a href="http://bbs.lequ.com/forum.php?mod=viewthread&tid=601137" target="_blank">戰報一</a></li>
+									<li><a href="http://bbs.lequ.com/forum.php?mod=viewthread&tid=601194" target="_blank">戰報二</a></li>
+									<li><a href="http://bbs.lequ.com/forum.php?mod=viewthread&tid=601938" target="_blank">戰報三</a></li>
+									<li><a href="http://bbs.lequ.com/forum.php?mod=viewthread&tid=609563" target="_blank">戰報四</a></li>
+									<li><a href="http://bbs.lequ.com/forum.php?mod=viewthread&tid=610281" target="_blank">戰報五</a></li>
+									<li><a href="http://bbs.lequ.com/forum.php?mod=viewthread&tid=610585" target="_blank">戰報六</a></li>
+									<li><a href="http://bbs.lequ.com/forum.php?mod=viewthread&tid=614897" target="_blank">戰報七</a></li>
+									<li><a href="http://bbs.lequ.com/forum.php?mod=viewthread&tid=615777" target="_blank">戰報八</a></li>
+									<li><a href="http://bbs.lequ.com/forum.php?mod=viewthread&tid=618046" target="_blank">戰報九</a></li>
+									<li><a href="http://bbs.lequ.com/forum.php?mod=viewthread&tid=619923" target="_blank">戰報十</a></li>
+									<li><a href="http://bbs.lequ.com/forum.php?mod=viewthread&tid=620054" target="_blank">戰報十一</a></li>
+									<li><a href="http://bbs.lequ.com/forum.php?mod=viewthread&tid=621245" target="_blank">戰報十二</a></li>
+									<li>卡點</li>
+									<ul>
+										<li><a href="http://bbs.lequ.com/forum.php?mod=viewthread&tid=610455" target="_blank">七海禁衛四</a></li>
+									</ul>
+								</ul>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse20">
+						<h4 class="panel-title">
+							試煉塔(敬請期待)
+						</h4>
+					</a>
+				</div>
+				<div id="collapse20" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="col-md-12">
+							<ul>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>
